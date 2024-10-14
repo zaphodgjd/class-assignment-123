@@ -37,7 +37,7 @@ void TicTacToe::setUpBoard()
 //
 void TicTacToe::scanForMouse()
 {
-    if (gameHasAI() && getCurrentPlayer()->isAIPlayer()) 
+    if (gameHasAI() && getCurrentPlayer() && getCurrentPlayer()->isAIPlayer()) 
     {
         updateAI();
         return;
@@ -238,7 +238,7 @@ int TicTacToeAI::evaluateBoard()
 //
 int TicTacToeAI::negamax(TicTacToeAI* state, int depth, int playerColor) 
 {
-    return 0l
+    return 0;
 }
 
 //
