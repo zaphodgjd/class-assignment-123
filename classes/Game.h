@@ -70,7 +70,7 @@ public:
 	const unsigned int			getCurrentTurnNo() { return _currentTurnNo; };
 	const int					getScore() { return _score; };
 	void						setScore(int score) { _score = score; };
-	Player*						getCurrentPlayer() { return _players.at(_currentTurnNo % _players.size()); };
+	Player*						getCurrentPlayer() { if (_players.size() == 0) return nullptr; else return _players.at(_currentTurnNo % _players.size()); };
 	Player*						getPlayerAt(unsigned int playerNumber) { return _players.at(playerNumber); };
 
 	GameTable				*_table;
