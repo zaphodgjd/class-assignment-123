@@ -16,7 +16,7 @@ endif()
 # Set compiler-specific flags for g++ and MinGW
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     if(LINUX OR WINDOWS)
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wno-unused-parameter -Wno-ignored-qualifiers")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wno-unused-parameter -Wno-ignored-qualifiers -Wno-cast-function-type -Wno-unused-variable -Wno-missing-field-initializers -Wno-overloaded-virtual")
     endif()
 endif()
 
@@ -65,7 +65,7 @@ if(MACOS OR LINUX)
 elseif(WINDOWS)
     target_link_libraries(tictactoe ${OPENGL_gl_LIBRARY})
     if(MINGW)
-        target_link_libraries(tictactoe glfw3)
+        target_link_libraries(tictactoe dwmapi)
     endif()
 endif()
 
