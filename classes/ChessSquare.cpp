@@ -1,5 +1,6 @@
 #include "ChessSquare.h"
 #include "Chess.h"
+#include "Bit.h"
 
 void ChessSquare::initHolder(const ImVec2 &position, const char *spriteName, const int column, const int row)
 {

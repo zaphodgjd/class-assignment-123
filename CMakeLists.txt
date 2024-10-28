@@ -54,7 +54,7 @@ add_executable(tictactoe Application.cpp
                           classes/Game.cpp
                           classes/Sprite.cpp
                           classes/Square.cpp
-                          classes/ChessSuare.cpp
+                          classes/ChessSquare.cpp
                           classes/TicTacToe.cpp
                           ${MAIN_FILE}
                           ${IMPL_FILE}

@@ -79,7 +79,7 @@ public:
 	// highlight the holder while a bit is being dragged to us
 	bool	highlighted();
 
-private:
+protected:
     // the texture to use for this sprite
     // GLuint _texture;
     // the parent of this sprite
